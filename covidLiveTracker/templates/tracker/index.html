@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Covid-19 live tracker </title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Covid-19 live tracker" />
+    <meta name="keywords" content="Covid-19 live tracker, corona virus, live map">
+    <meta name="author" content="codedthemes">
+    <!-- Favicon icon -->
+    <link rel="icon" href="{% static 'vendor/images/favicon.ico' %}" type="image/x-icon">
+    <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css/bootstrap/css/bootstrap.min.css' %}">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/icon/themify-icons/themify-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/icon/font-awesome/css/font-awesome.min.css' %}">
+    
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/icon/icofont/css/icofont.css' %}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css/jquery.mCustomScrollbar.css' %}">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="{% static 'tracker/css/custom.css' %}">
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <!--script src="https://code.highcharts.com/mapdata/1.0.0/custom/world-highres.js"></script-->
+    
+    <!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+    <link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+    
+
+</head>
+
+<body>
+        <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="loader-track">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    
+    <div id="pcoded" class="pcoded pb-2">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+               <div class="navbar-wrapper">
+                   <div class="navbar-logo">
+                       
+                       <a href="/">
+                           <img class="img-fluid" src="{% static 'vendor/images/covid.png' %}" alt="Theme-Logo" />
+                       </a>
+                   </div>
+
+                   <div class="navbar-container container-fluid">
+                       <ul class="nav-left">
+                           <li></li>
+                        </ul>
+                       <ul class="nav-right">
+                           <li class="header-notification">
+                               <a><i class="ti-map"></i>
+                               <span class="badge bg-c-pink"></span></a>
+                            </li>
+                       </ul>
+                   </div>
+               </div>
+           </nav>
+
+
+        </div>
+    </div>
+
+    <div class="pcoded-main-container pt-4">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                        
+                            <div class="page-body pt-4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-block">
+                                                <div class="row">
+                                                    <!-- order-card start -->
+                                            
+                                            <div class="col-md-4 col-xl-4">
+                                                <div class="card bg-c-yellow order-card mb-1">
+                                                    <div class="card-block">
+                                                        <h6 class="m-b-20">Confirmed cases</h6>
+                                                        <h2 class="text-right"> <i class="ti-info-alt f-left"> </i><span id="total_confirmed_cases"></span></h2>
+                                                        <p class="m-b-0">Last Updated: <span class="f-right" id="last_updated_confirmed"></span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-xl-4">
+                                                <div class="card bg-c-green order-card mb-1">
+                                                    <div class="card-block">
+                                                        <h6 class="m-b-20">Recovered</h6>
+                                                        <h2 class="text-right"> <i class="ti-info-alt f-left"> </i><span id="total_recovered_cases"></span></h2>
+                                                        <p class="m-b-0">Last Updated: <span class="f-right" id="last_updated_recovered"></span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-xl-4">
+                                                <div class="card bg-c-pink order-card mb-1">
+                                                    <div class="card-block">
+                                                        <h6 class="m-b-20">Deaths</h6>
+                                                        <h2 class="text-right"> <i class="ti-info-alt f-left"></i><span id="total_death_cases"></span></h2>
+                                                        <p class="m-b-0">Last Updated: <span class="f-right" id="last_updated_death"></span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- order-card end -->
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+
+                            <!--div class="page-body pt-4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <div class="card-block">
+                                               
+                                                <div class="row">
+                                                    <div class="col-10">
+                                                        <div id='map' class="container-fluid" style='height: 900px;'></div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <pre id="features"></pre>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div-->
+
+                            
+                            <div class="page-body pt-2">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <!--div class="card-header">
+                                                <h5>
+                                                </h5>
+                                            </div-->
+                                            <div class="card-block" id="hc_container" style="height: 600px;">
+                                                <!--div id="hc_container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div-->
+                                                
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="styleSelector">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Required Jquery -->
+<script type="text/javascript" src="{% static 'vendor/js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/js/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{% static 'vendor/js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="{% static 'vendor/js/modernizr/modernizr.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/js/modernizr/css-scrollbars.js' %}"></script>
+
+<!-- Custom js -->
+<script type="text/javascript" src="{% static 'vendor/js/script.js' %}"></script>
+<script src="{% static 'vendor/js/pcoded.min.js' %}"></script>
+<script src="{% static 'vendor/js/vartical-demo.js' %}"></script>
+<script src="{% static 'vendor/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<script src="{% static 'tracker/js/app.js' %}"></script>
+</body>
+
+</html>
