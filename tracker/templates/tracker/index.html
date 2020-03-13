@@ -1,7 +1,8 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,38 +11,70 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Covid-19 Live tracker</title>
-  </head>
-  <body>
-      <!-- Just an image -->
-    <nav class="navbar navbar-dark bg-primary">
+</head>
+
+<body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-dark bg-primary sticky-top">
         <a class="navbar-brand" href="#">
-        <img src="{% static 'img/covid.png' %}" height="35" alt="">
+            <img src="{% static 'img/covid.png' %}" height="35" alt="">
         </a>
     </nav>
-    
-        
-        
-        
-        
-        <div class="container-fluid">
 
-            <div class="row">
-              <div class="col">
-                <p id="last_updated_confirmed"></p>
-              </div>
-              <div class="col">
-                <p id="last_updated_recovered"></p>
-              </div>
-              <div class="col">
-                <p id="last_updated_death"></p>
-              </div>
+    <div class="card-deck pt-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Confirmed cases</h5>
+                <p class="card-text" id="total_confirmed_cases"></p>
+                <p class="card-text"><small class="text-muted" id="last_updated_confirmed"></small></p>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div id="hc_container" style="height: 600px;"></div>
-                </div>
-              </div>
-          </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Recovered</h5>
+                <p class="card-text" id="total_recovered_cases"></p>
+                <p class="card-text"><small class="text-muted" id="last_updated_recovered"></small></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Deaths</h5>
+                <p class="card-text" id="total_death_cases"></p>
+                <p class="card-text"><small class="text-muted" id="last_updated_death"></small></p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col">
+                <p ></p>
+            </div>
+            <div class="col">
+                <p id="last_updated_recovered"></p>
+            </div>
+            <div class="col">
+                <p id="last_updated_death"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="hc_container" style="height: 600px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="footer mt-auto py-3">
+            <div class="container text-center">
+                <span class="text-muted small">Data source: <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/README.md" target="_blank">2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</a></span>
+                <br>
+                <span class="text-muted small">Contact: <a href="mailto:anandmaurya@hotmail.com" target="_blank">anandmaurya@hotmail.com</a></span>
+                <br>
+
+            </div>
+        </footer>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -54,5 +87,6 @@
     <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
     <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
     <script src="{% static 'js/app.js' %}"></script>
-  </body>
+</body>
+
 </html>
