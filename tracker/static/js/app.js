@@ -150,3 +150,4 @@ Highcharts.getJSON('data/', function (data) {
     });
 
 });
+
