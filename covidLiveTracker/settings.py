@@ -25,9 +25,9 @@ SECRET_KEY = 'zl(2=voxdtlzz_3tyf18cb2qs-8nf12+4d7ng-u)u05uc*o4d0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ['150.254.123.97',]
-ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1',]
+#ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1',]
 
 # Application definition
 
@@ -125,5 +125,5 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static_common'),
 ]
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE = True
