@@ -9,7 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/custom' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
     <title>Covid-19 Live tracker</title>
 </head>
@@ -17,12 +17,12 @@
 <body>
     <!-- Just an image -->
     <nav class="navbar navbar-dark bg-primary sticky-top">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand pb-0" href="/">
             <img src="{% static 'img/covid.png' %}" height="35" alt="">
         </a>
     </nav>
 
-    <div class="card-deck pt-2 ml-1 mr-1" id="stats">
+    <div class="card-deck pt-3 ml-2 mr-2" id="stats">
         <div class="card alert alert-warning">
             <div class="card-body p-1">
                 <h5 class="card-title mb-0">Confirmed cases </span></h5><hr class="mt-1">

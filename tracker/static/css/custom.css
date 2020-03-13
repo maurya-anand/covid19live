@@ -1,8 +1,9 @@
-@media screen and (max-width: 766px) {
+/* @media screen and (max-width: 766px) {
     nav a.navbar-brand{
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      height: 20px;
     }
-  }
+  } */
 

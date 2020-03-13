@@ -1,5 +1,3 @@
-console.log("js added");
-
 getLiveData();
 
 function getLiveData (){
@@ -59,10 +57,6 @@ Highcharts.getJSON('data/', function (data) {
     });
     //console.log(data_series);
     Highcharts.mapChart('hc_container', {
-        loading: {
-            hideDuration: 8000,
-            showDuration: 9000
-        },
         chart: {
             //borderWidth: 1,
             map: 'custom/world',
