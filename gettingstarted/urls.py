@@ -4,7 +4,6 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-import hello.views
 import tracker.views
 
 # To add a new path, first import the app:
@@ -16,7 +15,6 @@ import tracker.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", tracker.views.index, name="index"),
-    path("db/", hello.views.db, name="db"),
+    path('',include('tracker.urls')),
     path("admin/", admin.site.urls),
 ]
