@@ -9,6 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/custom' %}">
 
     <title>Covid-19 Live tracker</title>
 </head>
@@ -21,25 +22,25 @@
         </a>
     </nav>
 
-    <div class="card-deck pt-2">
-        <div class="card">
+    <div class="card-deck pt-2 ml-1 mr-1">
+        <div class="card alert alert-warning">
             <div class="card-body">
                 <h5 class="card-title">Confirmed cases</h5>
-                <p class="card-text" id="total_confirmed_cases"></p>
+                <h2 class="card-text font-weight-bolder" id="total_confirmed_cases"></h2>
                 <p class="card-text"><small class="text-muted" id="last_updated_confirmed"></small></p>
             </div>
         </div>
-        <div class="card">
+        <div class="card alert alert-success">
             <div class="card-body">
                 <h5 class="card-title">Recovered</h5>
-                <p class="card-text" id="total_recovered_cases"></p>
+                <h2 class="card-text font-weight-bolder" id="total_recovered_cases"></h2>
                 <p class="card-text"><small class="text-muted" id="last_updated_recovered"></small></p>
             </div>
         </div>
-        <div class="card">
+        <div class="card alert alert-danger">
             <div class="card-body">
-                <h5 class="card-title">Deaths</h5>
-                <p class="card-text" id="total_death_cases"></p>
+                <h5 class="card-title text-muted">Deaths</h5>
+                <h2 class="card-text font-weight-bolder" id="total_death_cases"></h2>
                 <p class="card-text"><small class="text-muted" id="last_updated_death"></small></p>
             </div>
         </div>
