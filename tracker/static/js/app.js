@@ -58,7 +58,7 @@ Highcharts.getJSON('data/', function (data) {
     //console.log(data_series);
     Highcharts.mapChart('hc_container', {
         chart: {
-            //borderWidth: 1,
+            //borderWidth: 0.5,
             map: 'custom/world',
         },
 
@@ -82,10 +82,13 @@ Highcharts.getJSON('data/', function (data) {
         },
 
         colorAxis: {
-            //minColor: '#000fb0',
             min: 1,
             max: 10000,
-            type: 'logarithmic'
+            type: 'logarithmic',
+            minColor: '#ece2f0',
+            maxColor: '#007bff',
+            //lineColor: 'green',
+            //lineWidth: 10
         },
 
         credits: {
@@ -119,7 +122,7 @@ Highcharts.getJSON('data/', function (data) {
             {
                 name: 'Countries',
                 //color: '#E0E0E0',
-                nullColor: 'red',
+                //nullColor: 'red',
                 enableMouseTracking: false
             },
             {

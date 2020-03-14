@@ -25,39 +25,32 @@
     <div class="card-deck pt-3 ml-2 mr-2" id="stats">
         <div class="card alert alert-warning">
             <div class="card-body p-1">
-                <h5 class="card-title mb-0">Confirmed cases </span></h5><hr class="mt-1">
-                <h2 class="card-text font-weight-bolder" id="total_confirmed_cases"></h2>
-                <p class="text-muted small mb-0">Last updated: <span class="text-muted" id="last_updated_confirmed"></span></p>
+                <h5 class="card-title mb-0">Confirmed cases </span></h5>
+                <hr class="mt-1">
+                <h2 class="card-text font-weight-bolder" id="total_confirmed_cases"><span class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">Live...</span></h2>
+                </span>
+                <p class="text-muted small mb-0">Last updated: <span class="text-muted" id="last_updated_confirmed"><span class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">Live...</span></span></p>
             </div>
         </div>
         <div class="card alert alert-success">
             <div class="card-body p-1">
-                <h5 class="card-title mb-0">Recovered</h5><hr class="mt-1">
-                <h2 class="card-text font-weight-bolder" id="total_recovered_cases"></h2>
-                <p class="text-muted small mb-0">Last updated: <span class="text-muted" id="last_updated_recovered"></span></p>
+                <h5 class="card-title mb-0">Recovered</h5>
+                <hr class="mt-1">
+                <h2 class="card-text font-weight-bolder" id="total_recovered_cases"><span class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">Live...</span></h2>
+                <p class="text-muted small mb-0">Last updated: <span class="text-muted" id="last_updated_recovered"><span class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">Live...</span></span></p>
             </div>
         </div>
         <div class="card alert alert-danger">
             <div class="card-body p-1">
-                <h5 class="card-title mb-0">Deaths</h5><hr class="mt-1">
-                <h2 class="card-text font-weight-bolder" id="total_death_cases"></h2>
-                <p class="text-muted small mb-0">Last updated: <span class="text-muted" id="last_updated_death"></span></p>
+                <h5 class="card-title mb-0">Deaths</h5>
+                <hr class="mt-1">
+                <h2 class="card-text font-weight-bolder" id="total_death_cases"><span class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">Live...</span></h2>
+                <p class="text-muted small mb-0">Last updated: <span class="text-muted" id="last_updated_death"><span class="spinner-grow spinner-grow-sm" role="status"><span class="sr-only">Live...</span></span></p>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
 
-        <div class="row">
-            <div class="col">
-                <p ></p>
-            </div>
-            <div class="col">
-                <p id="last_updated_recovered"></p>
-            </div>
-            <div class="col">
-                <p id="last_updated_death"></p>
-            </div>
-        </div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div id="hc_container" style="height: 600px;"></div>
@@ -65,14 +58,12 @@
         </div>
     </div>
 
-    <div class="container">
-        <footer class="footer mt-auto py-3">
+    <div class="container-fluid">
+        <footer class="footer mt-auto bg-light">
             <div class="container text-center">
                 <span class="text-muted small">Data source: <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/README.md" target="_blank">2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</a></span>
                 <br>
                 <span class="text-muted small">Contact: <a href="mailto:anandmaurya@hotmail.com" target="_blank">anandmaurya@hotmail.com</a></span>
-                <br>
-
             </div>
         </footer>
     </div>
