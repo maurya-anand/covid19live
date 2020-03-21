@@ -58,6 +58,7 @@ Highcharts.getJSON('data/', function (data) {
     //console.log(data_series);
     Highcharts.mapChart('hc_container', {
         chart: {
+            height: '40%',
             //borderWidth: 0.5,
             map: 'custom/world',
         },
