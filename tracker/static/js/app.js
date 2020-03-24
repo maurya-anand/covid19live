@@ -45,6 +45,7 @@ Highcharts.getJSON('data/', function (data) {
         $('#total_confirmed_cases').text(data.total_reported);
         $('#total_recovered_cases').text(data.total_recovered);
         $('#total_death_cases').text(data.total_deaths);
+        createTable(data.dt_table);
     }
     else {
         data_series= JSON.parse(data);
@@ -148,3 +149,28 @@ Highcharts.getJSON('data/', function (data) {
 
 });
 
+
+function createTable(dataSet){
+    //console.log(dataSet);
+    var table = $('#cases_dt').DataTable(
+        {
+            dom: "<'row align-items-center'<'col justify-content-center'f>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row align-items-center'<'col justify-content-center'p>>",
+            data: JSON.parse(dataSet),
+            columns: [
+                { title: "Country" },
+                { title: "Code", },
+                { title: "Confirmed", searchable: false },
+                { title: "Recovered", searchable: false },
+                { title: "Deaths", searchable: false },
+            ],
+            order: [[ 3, "desc" ]],
+            paging:  false,
+            //scrollY: 300,
+            scrollY: '75vh',
+            scrollX: false,
+            pageLength: 50
+        }
+    );
+}

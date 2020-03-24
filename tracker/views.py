@@ -79,7 +79,9 @@ def getData(request):
     total_reported=0
     total_recovered=0
     total_deaths=0
-    
+    dt_data={}
+    dt_data['data']=[]
+
     if (response2):
         geodata2 = response2.json()
 
@@ -112,17 +114,24 @@ def getData(request):
             if c2code in confirmed_cases:
                 res_arr2.append({"code3":country_code[c2code],"z":confirmed_cases[c2code],"code":c2code,"value":confirmed_cases[c2code],"recovered":recovered_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0) })
                 outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0))
+                dt_data['data'].append([c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0)])
             else:
                 res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0 })
-                outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],0,0,0)            
+                outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],0,0,0)
+                dt_data['data'].append([c3code,country_code[c2code],0,0,0])            
+        
+        dt_data_response=json.dumps(dt_data['data'])
         
         res_arr_obj2 = json.dumps(res_arr2)
         res_obj3={
             'total_reported':total_reported,
             'total_recovered':total_recovered,
             'total_deaths':total_deaths,
-            'plotdata':res_arr2
+            'plotdata':res_arr2,
+            'dt_table':dt_data_response
             }
+    
+    #print(dt_data_response)
     
     if len(res_arr_obj2) < 1: # if arcgis fails
         return JsonResponse(res_arr_obj,safe=False)
