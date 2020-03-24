@@ -65,8 +65,8 @@ Highcharts.getJSON('data/', function (data) {
         
         mapNavigation: {
             enabled: false,
-            enableDoubleClickZoomTo: false,
-            enableMouseWheelZoom: false,
+            //enableDoubleClickZoomTo: false,
+            //enableMouseWheelZoom: true,
             // buttonOptions: {
             //     verticalAlign: 'bottom'
             // }
@@ -77,7 +77,7 @@ Highcharts.getJSON('data/', function (data) {
         },
 
         subtitle: {
-            text: 'Hover on the country to view details'
+            text: 'Hover or click on the country to view details. Select any area on the map to zoom.'
         },
 
         legend: {
