@@ -159,7 +159,7 @@ function createTable(dataSet){
             data: JSON.parse(dataSet),
             columns: [
                 { title: "Country" },
-                { title: "Code", },
+                { title: "Code",visible: false, },
                 { title: "Confirmed", searchable: false },
                 { title: "Recovered", searchable: false },
                 { title: "Deaths", searchable: false },
@@ -168,7 +168,7 @@ function createTable(dataSet){
             paging:  false,
             //scrollY: 300,
             scrollY: '75vh',
-            scrollX: false,
+            scrollX: true,
             pageLength: 50
         }
     );
