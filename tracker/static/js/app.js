@@ -153,7 +153,7 @@ function createTable(dataSet){
     //console.log(dataSet);
     var table = $('#cases_dt').DataTable(
         {
-            dom: "<'row align-items-center'<'col justify-content-center'f>>" +
+            dom: "<'d-flex justify-content-start'<'p-2'f>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row align-items-center'<'col justify-content-center'p>>",
             data: JSON.parse(dataSet),
