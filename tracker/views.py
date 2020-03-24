@@ -26,15 +26,10 @@ def getData(request):
     except requests.exceptions.HTTPError as e:
         print (e.response.text,'Failed: https://opendata.arcgis.com/datasets/bbb2e4f589ba40d692fab712ae37b9ac_1.geojson')
 
-    #print(response2.json())
-    
     if (response.json()):
         geodata = response.json()
-        #geodata2 = response2.json()
-    
-        #print(len(geodata))
-        #print(geodata['confirmed']['locations'])
         res_dict={}
+    
         for i in geodata['confirmed']['locations']:
             #print(i['country_code'],i['latest'])
             if i['country_code'] in res_dict:
@@ -112,21 +107,15 @@ def getData(request):
                 else:
                     deaths_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Deaths']
         
-        
-
-        # for j,k in confirmed_cases.items():
-        #     print (j,k) #TG 18
-        #     if j in country_code:
-        #         outstr = '{}\t{}\t{}\t{}\t{}\t{}\n'.format(country_code[j],k,j,k,recovered_cases[j],deaths_cases[j])
-        #         res_arr2.append({"code3":country_code[j],"z":k,"code":j,"value":k,"recovered":recovered_cases[j],"deaths":deaths_cases[j] })
-        
         for c3code,c2code in country_code2.items():
-            # print(c3code,c2code) #recovered_cases.get(c2code, 0)  deaths_cases.get(c2code, 0)
+            outstr=None
             if c2code in confirmed_cases:
                 res_arr2.append({"code3":country_code[c2code],"z":confirmed_cases[c2code],"code":c2code,"value":confirmed_cases[c2code],"recovered":recovered_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0) })
+                outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0))
             else:
                 res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0 })
-
+                outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],0,0,0)            
+        
         res_arr_obj2 = json.dumps(res_arr2)
         res_obj3={
             'total_reported':total_reported,
