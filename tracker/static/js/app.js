@@ -165,7 +165,7 @@ function createTable(dataSet){
                 { title: "Recovered", searchable: false },
                 { title: "Deaths", searchable: false },
             ],
-            order: [[ 3, "desc" ]],
+            order: [[ 2, "desc" ]],
             paging:  false,
             //scrollY: 300,
             scrollY: '75vh',
