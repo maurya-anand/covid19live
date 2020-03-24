@@ -159,6 +159,11 @@ function createTable(dataSet){
             dom: "<'d-flex justify-content-center mt-2'<'pb-0'f>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row align-items-center'<'col justify-content-center'p>>",
+            language: {
+                searchPlaceholder: "Country ...",
+                search: "Filter by:",
+                zeroRecords: "No data available",
+            },
             data: JSON.parse(dataSet),
             columns: [
                 { title: "Country",width:'30%' },
@@ -167,7 +172,7 @@ function createTable(dataSet){
                 { title: "Recovered", searchable: false },
                 { title: "Deaths", searchable: false },
             ],
-            order: [[ 2, "desc" ]],
+            order: [[ 2, "desc" ],[ 0, 'asc' ]],
             paging:  false,
             //scrollY: 300,
             scrollY: '75vh',
