@@ -60,6 +60,16 @@ Highcharts.getJSON('data/', function (data) {
             //height: '40%',
             //borderWidth: 0.5,
             map: 'custom/world',
+            zoomType: 'xy',
+        },
+        
+        mapNavigation: {
+            enabled: false,
+            enableDoubleClickZoomTo: false,
+            enableMouseWheelZoom: false,
+            // buttonOptions: {
+            //     verticalAlign: 'bottom'
+            // }
         },
 
         title: {
@@ -72,13 +82,6 @@ Highcharts.getJSON('data/', function (data) {
 
         legend: {
             enabled: false
-        },
-
-        mapNavigation: {
-            enabled: true,
-            // buttonOptions: {
-            //     verticalAlign: 'bottom'
-            // }
         },
 
         colorAxis: {
