@@ -161,7 +161,7 @@ function createTable(dataSet){
             "<'row align-items-center'<'col justify-content-center'p>>",
             data: JSON.parse(dataSet),
             columns: [
-                { title: "Country" },
+                { title: "Country",width:'30%' },
                 { title: "Code",visible: false, },
                 { title: "Confirmed", searchable: false },
                 { title: "Recovered", searchable: false },
