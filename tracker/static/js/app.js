@@ -73,7 +73,7 @@ Highcharts.getJSON('data/', function (data) {
         },
 
         title: {
-            useHTML: true,
+            //useHTML: true,
             text: 'Current status of Coronavirus disease (COVID-19) pandemic',
         },
 
