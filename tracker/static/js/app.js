@@ -73,7 +73,8 @@ Highcharts.getJSON('data/', function (data) {
         },
 
         title: {
-            text: 'Global cases of corona virus',
+            useHTML: true,
+            text: 'Current status of Coronavirus disease (COVID-19) pandemic',
         },
 
         subtitle: {
