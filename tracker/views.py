@@ -93,6 +93,8 @@ def getData(request):
             total_deaths=total_deaths+info['properties']['Deaths']
             if info['properties']['Province_State']=='Greenland':
                 info['properties']['Country_Region']='Greenland'
+            if info['properties']['Province_State']=='Hong Kong':
+                info['properties']['Country_Region']='Hong Kong'
 
             if info['properties']['Country_Region'] in country_code2:
                 #print(country_code2[info['properties']['Country_Region']])
