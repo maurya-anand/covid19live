@@ -114,9 +114,9 @@ def getData(request):
             
             countryNameDt=None
             if c3code == 'Congo (Kinshasa)':
-                countryNameDt = 'Democratic Republic of Congo'
+                countryNameDt = 'Democratic Republic of Congo (Kinshasa)'
             elif c3code == 'Congo (Brazzaville)':
-                countryNameDt = 'Republic of Congo'
+                countryNameDt = 'Republic of Congo (Brazzaville)'
             else:
                 countryNameDt= c3code
                
