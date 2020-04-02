@@ -89,10 +89,8 @@ Highcharts.getJSON('data/', function (data) {
             min: 1,
             max: 10000,
             type: 'logarithmic',
-            minColor: '#ffffff', /* #ece2f0 */
+            minColor: 'd4edda', /* #ffffff',  #ece2f0 */
             maxColor: '#007bff',
-            //lineColor: 'green',
-            //lineWidth: 10
         },
 
         credits: {

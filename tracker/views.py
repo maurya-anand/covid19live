@@ -155,4 +155,6 @@ def getData(request):
     else:
         return JsonResponse(res_obj3,safe=False)
 
-# source: https://www.arcgis.com/home/item.html?id=c0b356e20b30490c8b8b4c7bb9554e7c&view=list#data
+# source country wise data: https://www.arcgis.com/home/item.html?id=c0b356e20b30490c8b8b4c7bb9554e7c&view=list#data
+# source time series: https://coronavirus-resources.esri.com/datasets/1cb306b5331945548745a5ccd290188e_4
+# source time series api: https://opendata.arcgis.com/datasets/1cb306b5331945548745a5ccd290188e_4.geojson
