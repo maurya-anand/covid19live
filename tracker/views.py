@@ -95,6 +95,8 @@ def getData(request):
                 info['properties']['Country_Region']='Greenland'
             if info['properties']['Province_State']=='Hong Kong':
                 info['properties']['Country_Region']='Hong Kong'
+            if info['properties']['Country_Region']=='Burma':
+                info['properties']['Country_Region']='Myanmar'
 
             if info['properties']['Country_Region'] in country_code2:
                 #print(country_code2[info['properties']['Country_Region']])
@@ -123,6 +125,8 @@ def getData(request):
                 countryNameDt = 'Republic of Congo (Brazzaville)'
             elif c3code == 'Timor-Leste':
                 countryNameDt= 'East Timor (Timor-Leste)'
+            elif c3code == 'Burma':
+                countryNameDt= 'Myanmar'
             else:
                 countryNameDt= c3code
             
