@@ -20,14 +20,17 @@ function getLiveData (){
             var total_death_cases= response.deaths['latest'];
             var last_updated_death_cases= response.deaths['last_updated'];
             
-            //$('#total_confirmed_cases').text(total_confirmed_cases);
+            // $('#total_confirmed_cases').text(total_confirmed_cases);
             $('#last_updated_confirmed').text(new Date(Date.parse(last_updated_confirmed_cases)));
-
+            
+            // console.log(new Date().toLocaleString());
             //$('#total_recovered_cases').text(total_recovered_cases);
             $('#last_updated_recovered').text(new Date(Date.parse(last_updated_recovered_cases)));
+            
 
             //$('#total_death_cases').text(total_death_cases);
             $('#last_updated_death').text(new Date(Date.parse(last_updated_death_cases)));
+            
        
         },
         error: function(){
@@ -44,6 +47,9 @@ Highcharts.getJSON('data/', function (data) {
         $('#total_confirmed_cases').text(data.total_reported);
         $('#total_recovered_cases').text(data.total_recovered);
         $('#total_death_cases').text(data.total_deaths);
+        $('#last_updated_confirmed').text(new Date().toLocaleString());
+        $('#last_updated_recovered').text(new Date().toLocaleString());
+        $('#last_updated_death').text(new Date().toLocaleString());
         createTable(data.dt_table);
     }
     else {
