@@ -14,11 +14,11 @@ country_code = {"AF":"AFG", "AX":"ALA", "AL":"ALB", "DZ":"DZA", "AS":"ASM", "AD"
 country_code2={"Afghanistan":"AF", "Aland Islands":"AX", "Albania":"AL", "Algeria":"DZ", "American Samoa":"AS", "Andorra":"AD", "Angola":"AO", "Anguilla":"AI", "Antarctica":"AQ", "Antigua and Barbuda":"AG", "Argentina":"AR", "Armenia":"AM", "Aruba":"AW", "Australia":"AU", "Austria":"AT", "Azerbaijan":"AZ", "Bahamas":"BS", "Bahrain":"BH", "Bangladesh":"BD", "Barbados":"BB", "Belarus":"BY", "Belgium":"BE", "Belize":"BZ", "Benin":"BJ", "Bermuda":"BM", "Bhutan":"BT", "Bolivia":"BO", "Bonaire, Saint Eustatius and Saba":"BQ", "Bosnia and Herzegovina":"BA", "Botswana":"BW", "Bouvet Island":"BV", "Brazil":"BR", "British Indian Ocean Territory":"IO", "British Virgin Islands":"VG", "Brunei":"BN", "Bulgaria":"BG", "Burkina Faso":"BF", "Burundi":"BI", "Cambodia":"KH", "Cameroon":"CM", "Canada":"CA", "Cape Verde":"CV", "Cayman Islands":"KY", "Central African Republic":"CF", "Chad":"TD", "Chile":"CL", "China":"CN", "Christmas Island":"CX", "Cocos Islands":"CC", "Colombia":"CO", "Comoros":"KM", "Cook Islands":"CK", "Costa Rica":"CR", "Croatia":"HR", "Cuba":"CU", "Curacao":"CW", "Cyprus":"CY", "Czechia":"CZ", "Congo (Kinshasa)":"CD", "Denmark":"DK", "Djibouti":"DJ", "Dominica":"DM", "Dominican Republic":"DO", "Timor-Leste":"TL", "Ecuador":"EC", "Egypt":"EG", "El Salvador":"SV", "Equatorial Guinea":"GQ", "Eritrea":"ER", "Estonia":"EE", "Ethiopia":"ET", "Falkland Islands":"FK", "Faroe Islands":"FO", "Fiji":"FJ", "Finland":"FI", "France":"FR", "French Guiana":"GF", "French Polynesia":"PF", "French Southern Territories":"TF", "Gabon":"GA", "Gambia":"GM", "Georgia":"GE", "Germany":"DE", "Ghana":"GH", "Gibraltar":"GI", "Greece":"GR", "Greenland":"GL", "Grenada":"GD", "Guadeloupe":"GP", "Guam":"GU", "Guatemala":"GT", "Guernsey":"GG", "Guinea":"GN", "Guinea-Bissau":"GW", "Guyana":"GY", "Haiti":"HT", "Heard Island and McDonald Islands":"HM", "Honduras":"HN", "Hong Kong":"HK", "Hungary":"HU", "Iceland":"IS", "India":"IN", "Indonesia":"ID", "Iran":"IR", "Iraq":"IQ", "Ireland":"IE", "Isle of Man":"IM", "Israel":"IL", "Italy":"IT", "Cote d'Ivoire":"CI", "Jamaica":"JM", "Japan":"JP", "Jersey":"JE", "Jordan":"JO", "Kazakhstan":"KZ", "Kenya":"KE", "Kiribati":"KI", "Kosovo":"XK", "Kuwait":"KW", "Kyrgyzstan":"KG", "Laos":"LA", "Latvia":"LV", "Lebanon":"LB", "Lesotho":"LS", "Liberia":"LR", "Libya":"LY", "Liechtenstein":"LI", "Lithuania":"LT", "Luxembourg":"LU", "Macao":"MO", "North Macedonia":"MK", "Madagascar":"MG", "Malawi":"MW", "Malaysia":"MY", "Maldives":"MV", "Mali":"ML", "Malta":"MT", "Marshall Islands":"MH", "Martinique":"MQ", "Mauritania":"MR", "Mauritius":"MU", "Mayotte":"YT", "Mexico":"MX", "Micronesia":"FM", "Moldova":"MD", "Monaco":"MC", "Mongolia":"MN", "Montenegro":"ME", "Montserrat":"MS", "Morocco":"MA", "Mozambique":"MZ", "Myanmar":"MM", "Namibia":"NA", "Nauru":"NR", "Nepal":"NP", "Netherlands":"NL", "Netherlands Antilles":"AN", "New Caledonia":"NC", "New Zealand":"NZ", "Nicaragua":"NI", "Niger":"NE", "Nigeria":"NG", "Niue":"NU", "Norfolk Island":"NF", "North Korea":"KP", "Northern Mariana Islands":"MP", "Norway":"NO", "Oman":"OM", "Pakistan":"PK", "Palau":"PW", "Palestinian Territory":"PS", "Panama":"PA", "Papua New Guinea":"PG", "Paraguay":"PY", "Peru":"PE", "Philippines":"PH", "Pitcairn":"PN", "Poland":"PL", "Portugal":"PT", "Puerto Rico":"PR", "Qatar":"QA", "Congo (Brazzaville)":"CG", "Reunion":"RE", "Romania":"RO", "Russia":"RU", "Rwanda":"RW", "Saint Barthelemy":"BL", "Saint Helena":"SH", "Saint Kitts and Nevis":"KN", "Saint Lucia":"LC", "Saint Martin":"MF", "Saint Pierre and Miquelon":"PM", "Saint Vincent and the Grenadines":"VC", "Samoa":"WS", "San Marino":"SM", "Sao Tome and Principe":"ST", "Saudi Arabia":"SA", "Senegal":"SN", "Serbia":"RS", "Serbia and Montenegro":"CS", "Seychelles":"SC", "Sierra Leone":"SL", "Singapore":"SG", "Sint Maarten":"SX", "Slovakia":"SK", "Slovenia":"SI", "Solomon Islands":"SB", "Somalia":"SO", "South Africa":"ZA", "South Georgia and the South Sandwich Islands":"GS", "Korea, South":"KR", "South Sudan":"SS", "Spain":"ES", "Sri Lanka":"LK", "Sudan":"SD", "Suriname":"SR", "Svalbard and Jan Mayen":"SJ", "Swaziland":"SZ", "Sweden":"SE", "Switzerland":"CH", "Syria":"SY", "Taiwan*":"TW", "Tajikistan":"TJ", "Tanzania":"TZ", "Thailand":"TH", "Togo":"TG", "Tokelau":"TK", "Tonga":"TO", "Trinidad and Tobago":"TT", "Tunisia":"TN", "Turkey":"TR", "Turkmenistan":"TM", "Turks and Caicos Islands":"TC", "Tuvalu":"TV", "U.S. Virgin Islands":"VI", "Uganda":"UG", "Ukraine":"UA", "United Arab Emirates":"AE", "United Kingdom":"GB", "US":"US", "United States Minor Outlying Islands":"UM", "Uruguay":"UY", "Uzbekistan":"UZ", "Vanuatu":"VU", "Holy See":"VA", "Venezuela":"VE", "Vietnam":"VN", "Wallis and Futuna":"WF", "Western Sahara":"EH", "Yemen":"YE", "Zambia":"ZM", "Zimbabwe":"ZW"}
 def getData(request):
     
-    try:
-        response = requests.get('https://coronavirus-tracker-api.herokuapp.com/all')
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as e:
-        print (e.response.text,'Failed: https://coronavirus-tracker-api.herokuapp.com/all')
+    # try:
+    #     response = requests.get('https://coronavirus-tracker-api.herokuapp.com/all')
+    #     response.raise_for_status()
+    # except requests.exceptions.HTTPError as e:
+    #     print (e.response.text,'Failed: https://coronavirus-tracker-api.herokuapp.com/all')
 
     try:
         response2 = requests.get('https://opendata.arcgis.com/datasets/bbb2e4f589ba40d692fab712ae37b9ac_1.geojson')
@@ -26,47 +26,47 @@ def getData(request):
     except requests.exceptions.HTTPError as e:
         print (e.response.text,'Failed: https://opendata.arcgis.com/datasets/bbb2e4f589ba40d692fab712ae37b9ac_1.geojson')
 
-    if (response.json()):
-        geodata = response.json()
-        res_dict={}
+    # if (response.json()):
+    #     geodata = response.json()
+    #     res_dict={}
     
-        for i in geodata['confirmed']['locations']:
-            #print(i['country_code'],i['latest'])
-            if i['country_code'] in res_dict:
-                res_dict[i['country_code']]+=i['latest']
-            else:
-                res_dict[i['country_code']]=i['latest']
+    #     for i in geodata['confirmed']['locations']:
+    #         #print(i['country_code'],i['latest'])
+    #         if i['country_code'] in res_dict:
+    #             res_dict[i['country_code']]+=i['latest']
+    #         else:
+    #             res_dict[i['country_code']]=i['latest']
         
-        #print(res_dict)
+    #     #print(res_dict)
         
-        res_recov_dict={}
-        for i in geodata['recovered']['locations']:
-            #print(i['country_code'],i['latest'])
-            if i['country_code'] in res_recov_dict:
-                res_recov_dict[i['country_code']]+=i['latest']
-            else:
-                res_recov_dict[i['country_code']]=i['latest']
+    #     res_recov_dict={}
+    #     for i in geodata['recovered']['locations']:
+    #         #print(i['country_code'],i['latest'])
+    #         if i['country_code'] in res_recov_dict:
+    #             res_recov_dict[i['country_code']]+=i['latest']
+    #         else:
+    #             res_recov_dict[i['country_code']]=i['latest']
         
-        #print(res_recov_dict)
+    #     #print(res_recov_dict)
 
-        res_deaths_dict={}
-        for i in geodata['deaths']['locations']:
-            #print(i['country_code'],i['latest'])
-            if i['country_code'] in res_deaths_dict:
-                res_deaths_dict[i['country_code']]+=i['latest']
-            else:
-                res_deaths_dict[i['country_code']]=i['latest']
+    #     res_deaths_dict={}
+    #     for i in geodata['deaths']['locations']:
+    #         #print(i['country_code'],i['latest'])
+    #         if i['country_code'] in res_deaths_dict:
+    #             res_deaths_dict[i['country_code']]+=i['latest']
+    #         else:
+    #             res_deaths_dict[i['country_code']]=i['latest']
         
-        #print(res_deaths_dict)
+    #     #print(res_deaths_dict)
 
-        res_arr=[]
-        for k,v in res_dict.items():
-            #print(k,v)
-            if k in country_code:
-                #res_arr.append({"code3":country_code[k],"z":v,"code":k,"value":v,"recovered":res_recov_dict[k],"deaths":res_deaths_dict[k] })
-                res_arr.append({"code3":country_code[k],"z":v,"code":k,"value":v,"recovered":res_recov_dict.get(k, 0),"deaths":res_deaths_dict.get(k, 0) })
+    #     res_arr=[]
+    #     for k,v in res_dict.items():
+    #         #print(k,v)
+    #         if k in country_code:
+    #             #res_arr.append({"code3":country_code[k],"z":v,"code":k,"value":v,"recovered":res_recov_dict[k],"deaths":res_deaths_dict[k] })
+    #             res_arr.append({"code3":country_code[k],"z":v,"code":k,"value":v,"recovered":res_recov_dict.get(k, 0),"deaths":res_deaths_dict.get(k, 0) })
 
-        res_arr_obj=json.dumps(res_arr)
+    #     res_arr_obj=json.dumps(res_arr)
     
     res_deaths_dict2={}
     confirmed_cases={}
