@@ -180,9 +180,10 @@ function createTable(dataSet){
             order: [[ 2, "desc" ],[ 0, 'asc' ]],
             paging:  false,
             //scrollY: 300,
-            scrollY: '75vh',
+            scrollY: '70vh',
             scrollX: true,
             pageLength: 50
         }
     );
 }
+

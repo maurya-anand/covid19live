@@ -53,7 +53,7 @@
         </div>
     </div>
     
-    <div class="container-fluid pt-4 pb-4">
+    <div class="container-fluid pt-4 pb-2">
         <div class="row no-gutters">
             <div class="col-sm-12 col-md-9">
                 <!--div id="hc_container" style="height: 600px;"></div-->
@@ -61,23 +61,35 @@
             </div>
             <div class="col-12 col-md-3">
                 <table id="cases_dt" class="table table-hover table-sm"></table>
-                <!-- <div class="table-responsive-sm">
-                    <table id="cases_dt" class="table table-hover table-sm"></table>
-                <div> -->
+                
+                <p class="pt-2 mb-0">
+                    <a class="btn btn-primary btn-block" data-toggle="collapse" href="#collapseNextstrain" role="button" aria-expanded="false" aria-controls="collapseNextstrain" id="loadNextstrain" name="nxtdiv">
+                        Genomic epidemiology of nCoV-19 from Nextstrain
+                    </a>
+                </p>
             </div>
         </div>
     </div>
     
+    <div class="collapse" id="collapseNextstrain">
+        <div class="embed-responsive embed-responsive-16by9" id="nxtdiv">
+            <iframe class="embed-responsive-item" src="https://nextstrain.org/ncov/gisaid?c=country&m=num_date&p=full" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    
+
+
     <div class="container-fluid pt-4">
         <footer class="footer mt-auto bg-light">
             <div class="container text-center">
-                <span class="text-muted small">Data source: <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/README.md" target="_blank">2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</a></span>
+                <span class="text-muted small">Data source: <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/README.md" target="_blank">2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</a> and <a href="https://doi.org/10.1093/bioinformatics/bty407" target="_blank">Nextstrain: Hadfield et al, Bioinformatics (2018)</a></span>
                 <br>
                 <span class="text-muted small">Contact: <a href="mailto:anandmaurya@hotmail.com" target="_blank">anandmaurya@hotmail.com</a></span>
             </div>
         </footer>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
