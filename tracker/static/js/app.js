@@ -35,6 +35,9 @@ function getLiveData (){
         },
         error: function(){
             console.log("no data received from the server");
+            $('#last_updated_confirmed').text(new Date().toLocaleString());
+            $('#last_updated_recovered').text(new Date().toLocaleString());
+            $('#last_updated_death').text(new Date().toLocaleString());
         }
     });
 }
@@ -47,9 +50,6 @@ Highcharts.getJSON('data/', function (data) {
         $('#total_confirmed_cases').text(data.total_reported);
         $('#total_recovered_cases').text(data.total_recovered);
         $('#total_death_cases').text(data.total_deaths);
-        $('#last_updated_confirmed').text(new Date().toLocaleString());
-        $('#last_updated_recovered').text(new Date().toLocaleString());
-        $('#last_updated_death').text(new Date().toLocaleString());
         createTable(data.dt_table);
     }
     else {
