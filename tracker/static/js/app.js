@@ -1,5 +1,6 @@
 getLiveData();
 
+
 function getLiveData (){
     $.ajax({
         url:'https://coronavirus-tracker-api.herokuapp.com/all',
@@ -41,6 +42,7 @@ function getLiveData (){
         }
     });
 }
+
 
 Highcharts.getJSON('data/', function (data) {
     //data_series= JSON.parse(data);
