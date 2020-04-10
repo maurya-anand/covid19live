@@ -65,6 +65,8 @@ Highcharts.getJSON('data/', function (data) {
         chart: {
             //height: '40%',
             //borderWidth: 0.5,
+            marginBottom: 0,
+            spacingBottom: 0,
             map: 'custom/world',
             zoomType: 'xy',
         },
