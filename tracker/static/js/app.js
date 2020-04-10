@@ -191,3 +191,6 @@ function createTable(dataSet){
     );
 }
 
+$('#loadNextstrain').click(function(){
+    $("#nxtFrame").attr("src", "https://nextstrain.org/ncov/gisaid?d=tree,map,entropy&onlyPanels&p=grid");
+});
