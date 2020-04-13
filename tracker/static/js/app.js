@@ -35,7 +35,7 @@ function getLiveData (){
        
         },
         error: function(){
-            console.log("no data received from the server");
+            console.log("no data received from the server. Falling back to default time");
             $('#last_updated_confirmed').text(new Date().toLocaleString());
             $('#last_updated_recovered').text(new Date().toLocaleString());
             $('#last_updated_death').text(new Date().toLocaleString());
@@ -192,5 +192,5 @@ function createTable(dataSet){
 }
 
 $('#loadNextstrain').click(function(){
-    $("#nxtFrame").attr("src", "https://nextstrain.org/ncov/gisaid?d=tree,map,entropy&p=grid");
+    $("#nxtFrame").attr("src", "https://nextstrain.org/ncov/global?sidebar=closed");
 });
