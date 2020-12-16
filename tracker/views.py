@@ -72,6 +72,7 @@ def getData(request):
     confirmed_cases={}
     recovered_cases={}
     deaths_cases={}
+    active_cases={} #
     res_arr2=[]
     res_arr_obj2={}
     res_obj3={}
@@ -91,6 +92,7 @@ def getData(request):
             total_reported=total_reported+info['properties']['Confirmed']
             total_recovered=total_recovered+info['properties']['Recovered']
             total_deaths=total_deaths+info['properties']['Deaths']
+            total_active=total_deaths+info['properties']['Active'] #
             if info['properties']['Province_State']=='Greenland':
                 info['properties']['Country_Region']='Greenland'
             if info['properties']['Province_State']=='Hong Kong':
@@ -114,7 +116,15 @@ def getData(request):
                     deaths_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Deaths']
                 else:
                     deaths_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Deaths']
-        
+                
+                if country_code2[info['properties']['Country_Region']] in active_cases: #
+                    active_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Active']
+                else:
+                    active_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Active']
+        print (confirmed_cases)
+        print (active_cases)
+        print (recovered_cases)
+
         for c3code,c2code in country_code2.items():
             outstr=None
             
@@ -131,15 +141,17 @@ def getData(request):
                 countryNameDt= c3code
             
             if c2code in confirmed_cases:
-                res_arr2.append({"code3":country_code[c2code],"z":confirmed_cases[c2code],"code":c2code,"value":confirmed_cases[c2code],"recovered":recovered_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0) })
+                #res_arr2.append({"code3":country_code[c2code],"z":confirmed_cases[c2code],"code":c2code,"value":confirmed_cases[c2code],"recovered":recovered_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0) })
+                res_arr2.append({"code3":country_code[c2code],"z":active_cases.get(c2code, 0),"code":c2code,"value":active_cases.get(c2code, 0),"active":active_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0),"recovered":recovered_cases.get(c2code, 0)})
                 outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0))
                 #dt_data['data'].append([c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0)])
-                dt_data['data'].append([countryNameDt,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0)])
+                dt_data['data'].append([countryNameDt,country_code[c2code],active_cases.get(c2code,0),recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0),confirmed_cases[c2code]])
             else:
-                res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0 })
+                #res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0 })
+                res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0,"active":0 })
                 outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],0,0,0)
                 #dt_data['data'].append([c3code,country_code[c2code],0,0,0])
-                dt_data['data'].append([countryNameDt,country_code[c2code],0,0,0])            
+                dt_data['data'].append([countryNameDt,country_code[c2code],0,0,0,0])            
         
         dt_data_response=json.dumps(dt_data['data'])
         
@@ -148,6 +160,7 @@ def getData(request):
             'total_reported':total_reported,
             'total_recovered':total_recovered,
             'total_deaths':total_deaths,
+            'total_active':total_active,
             'plotdata':res_arr2,
             'dt_table':dt_data_response
             }

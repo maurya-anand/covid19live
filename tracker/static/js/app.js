@@ -27,6 +27,7 @@ function getLiveData (){
             // console.log(new Date().toLocaleString());
             //$('#total_recovered_cases').text(total_recovered_cases);
             $('#last_updated_recovered').text(new Date(Date.parse(last_updated_recovered_cases)));
+            $('#last_updated_active').text(new Date(Date.parse(last_updated_recovered_cases)));
             
 
             //$('#total_death_cases').text(total_death_cases);
@@ -52,6 +53,7 @@ Highcharts.getJSON('data/', function (data) {
         $('#total_confirmed_cases').text(data.total_reported);
         $('#total_recovered_cases').text(data.total_recovered);
         $('#total_death_cases').text(data.total_deaths);
+        $('#total_active_cases').text(data.total_active);
         createTable(data.dt_table);
     }
     else {
@@ -94,7 +96,6 @@ Highcharts.getJSON('data/', function (data) {
         legend: {
             enabled: false
         },
-
         colorAxis: {
             min: 1,
             max: 10000,
@@ -149,7 +150,7 @@ Highcharts.getJSON('data/', function (data) {
                     //pointFormat: '<span style="font-size:12px">{point.name} ({point.properties.hc-a2}):</span><br><span style="font-size:20px">{point.z}</span>'
                     //pointFormat: '<span style="font-size:12px">{point.name} ({point.properties.hc-a2}):</span><br>Confirmed:<span style="font-size:20px"> {point.z}</span><br>Recovered:<span style="font-size:20px"> {point.recovered}</span><br>Deaths:<span style="font-size:20px"> {point.deaths}</span>'
                     pointFormat: '<span style="font-size:20px">{point.name}<br></span><br></br>' +
-                    '<span style="font-size:12px;">Confirmed: </span><span style="font-size:15px"> {point.z}</span><br><br>' +
+                    '<span style="font-size:12px;">Active: </span><span style="font-size:15px"> {point.z}</span><br><br>' +
                     '<span style="font-size:12px; color:green">Recovered: </span><span style="font-size:15px"> {point.recovered}</span><br><br>' +
                     '<span style="font-size:12px; color:red">Deaths: </span><span style="font-size:15px"> {point.deaths}</span>'
                     
@@ -177,9 +178,12 @@ function createTable(dataSet){
             columns: [
                 { title: "Country",width:'30%' },
                 { title: "Code",visible: false, },
-                { title: "Confirmed", searchable: false },
+                { title: "Active", searchable: false },
                 { title: "Recovered", searchable: false },
                 { title: "Deaths", searchable: false },
+                
+                { title: "Total cases", searchable: false },
+                
             ],
             order: [[ 2, "desc" ],[ 0, 'asc' ]],
             paging:  false,
