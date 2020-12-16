@@ -96,12 +96,20 @@ Highcharts.getJSON('data/', function (data) {
         legend: {
             enabled: false
         },
+
+        // colors: ['#ca0020', '#f4a582', '#f7f7f7', '#92c5de', '#0571b0'],
+
         colorAxis: {
             min: 1,
             max: 10000,
             type: 'logarithmic',
-            minColor: '#d4edda', /* #ffffff',  #ece2f0 */
-            maxColor: '#007bff',
+            // minColor: '#d4edda',  #ffffff',  #ece2f0 
+            // maxColor: '#007bff',
+            stops: [
+                [0, '#2b83ba'],
+                [0.5, '#92c5de'],
+                [0.9, '#c4463a'],
+                ],
         },
 
         credits: {
