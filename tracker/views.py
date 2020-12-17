@@ -121,9 +121,9 @@ def getData(request):
                     active_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Active']
                 else:
                     active_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Active']
-        print (confirmed_cases)
-        print (active_cases)
-        print (recovered_cases)
+        #print (confirmed_cases)
+        #print (active_cases)
+        #print (recovered_cases)
 
         for c3code,c2code in country_code2.items():
             outstr=None
@@ -145,6 +145,9 @@ def getData(request):
                 res_arr2.append({"code3":country_code[c2code],"z":active_cases.get(c2code, 0),"code":c2code,"value":active_cases.get(c2code, 0),"active":active_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0),"recovered":recovered_cases.get(c2code, 0)})
                 outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0))
                 #dt_data['data'].append([c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0)])
+                if recovered_cases[c2code] == 0:
+                    recovered_cases[c2code] = "NA"
+
                 dt_data['data'].append([countryNameDt,country_code[c2code],active_cases.get(c2code,0),recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0),confirmed_cases[c2code]])
             else:
                 #res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0 })
