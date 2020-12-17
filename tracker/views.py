@@ -151,7 +151,7 @@ def getData(request):
                 res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0,"active":0 })
                 outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],0,0,0)
                 #dt_data['data'].append([c3code,country_code[c2code],0,0,0])
-                dt_data['data'].append([countryNameDt,country_code[c2code],0,0,0,0])            
+                dt_data['data'].append([countryNameDt,country_code[c2code],0,"NA","NA","NA"])            
         
         dt_data_response=json.dumps(dt_data['data'])
         
