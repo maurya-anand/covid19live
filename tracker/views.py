@@ -13,168 +13,94 @@ country_code = {"AF":"AFG", "AX":"ALA", "AL":"ALB", "DZ":"DZA", "AS":"ASM", "AD"
 #country_code2={"Finland":"FI", "France":"FR", "North Macedonia":"MK", "Austria":"AT", "Netherlands":"NL", "Cyprus":"CY", "Nepal":"NP", "US":"US", "Georgia":"GE", "Greece":"GR", "Honduras":"HN", "China":"CN", "Bangladesh":"BD", "Cuba":"CU", "Ireland":"IE", "Colombia":"CO", "United Arab Emirates":"AE", "Panama":"PA", "Thailand":"TH", "Vietnam":"VN", "Ukraine":"UA", "Spain":"ES", "Italy":"IT", "United Kingdom":"GB", "Australia":"AU", "Argentina":"AR", "Dominican Republic":"DO", "Bosnia and Herzegovina":"BA", "Slovakia":"SK", "South Africa":"ZA", "Malaysia":"MY", "Cruise Ship":"OTH", "Morocco":"MA", "Paraguay":"PY", "Romania":"RO", "Togo":"TG", "Ecuador":"EC", "Russia":"RU", "Sri Lanka":"LK", "Congo (Kinshasa)":"OTH", "Saudi Arabia":"SA", "Sweden":"SE", "Jordan":"JO", "Israel":"IL", "Bolivia":"BO", "Mainland China":"CN", "Qatar":"QA", "Canada":"CA", "Switzerland":"CH", "Mexico":"MX", "Belgium":"BE", "Afghanistan":"AF", "Andorra":"AD", "Japan":"JP", "Denmark":"DK", "Iceland":"IS", "Brazil":"BR", "Czechia":"CZ", "Slovenia":"SI", "Poland":"PL", "Philippines":"PH", "Chile":"CL", "Bulgaria":"BG", "Azerbaijan":"AZ", "Serbia":"RS", "Pakistan":"PK", "Holy See":"VA", "Moldova":"MD", "Brunei":"BN", "Turkey":"TR", "Malta":"MT", "Reunion":"RE", "Cote d'Ivoire":"CI", "Portugal":"PT", "Albania":"AL", "Costa Rica":"CR", "Liechtenstein":"LI", "Cambodia":"KH", "Peru":"PE", "Egypt":"EG", "Tunisia":"TN", "Burkina Faso":"BF", "Iraq":"IQ", "Croatia":"HR", "Iran":"IR", "Indonesia":"ID", "Algeria":"DZ", "Germany":"DE", "Estonia":"EE", "Nigeria":"NG", "Bhutan":"BT", "Martinique":"MQ", "occupied Palestinian territory":"PS", "Guyana":"GY", "Belarus":"BY", "Lithuania":"LT", "Oman":"OM", "Bahrain":"BH", "Senegal":"SN", "Cameroon":"CM", "Luxembourg":"LU", "Monaco":"MC", "Kuwait":"KW", "Armenia":"AM", "Mongolia":"MN", "Hungary":"HU", "French Guiana":"GF", "Singapore":"SG", "San Marino":"SM", "Jamaica":"JM", "Latvia":"LV", "Korea":"KR", "India":"IN", "Maldives":"MV", "New Zealand":"NZ", "Norway":"NO", "Taiwan*":"TW", "Lebanon":"LB"}
 country_code2={"Afghanistan":"AF", "Aland Islands":"AX", "Albania":"AL", "Algeria":"DZ", "American Samoa":"AS", "Andorra":"AD", "Angola":"AO", "Anguilla":"AI", "Antarctica":"AQ", "Antigua and Barbuda":"AG", "Argentina":"AR", "Armenia":"AM", "Aruba":"AW", "Australia":"AU", "Austria":"AT", "Azerbaijan":"AZ", "Bahamas":"BS", "Bahrain":"BH", "Bangladesh":"BD", "Barbados":"BB", "Belarus":"BY", "Belgium":"BE", "Belize":"BZ", "Benin":"BJ", "Bermuda":"BM", "Bhutan":"BT", "Bolivia":"BO", "Bonaire, Saint Eustatius and Saba":"BQ", "Bosnia and Herzegovina":"BA", "Botswana":"BW", "Bouvet Island":"BV", "Brazil":"BR", "British Indian Ocean Territory":"IO", "British Virgin Islands":"VG", "Brunei":"BN", "Bulgaria":"BG", "Burkina Faso":"BF", "Burundi":"BI", "Cambodia":"KH", "Cameroon":"CM", "Canada":"CA", "Cape Verde":"CV", "Cayman Islands":"KY", "Central African Republic":"CF", "Chad":"TD", "Chile":"CL", "China":"CN", "Christmas Island":"CX", "Cocos Islands":"CC", "Colombia":"CO", "Comoros":"KM", "Cook Islands":"CK", "Costa Rica":"CR", "Croatia":"HR", "Cuba":"CU", "Curacao":"CW", "Cyprus":"CY", "Czechia":"CZ", "Congo (Kinshasa)":"CD", "Denmark":"DK", "Djibouti":"DJ", "Dominica":"DM", "Dominican Republic":"DO", "Timor-Leste":"TL", "Ecuador":"EC", "Egypt":"EG", "El Salvador":"SV", "Equatorial Guinea":"GQ", "Eritrea":"ER", "Estonia":"EE", "Ethiopia":"ET", "Falkland Islands":"FK", "Faroe Islands":"FO", "Fiji":"FJ", "Finland":"FI", "France":"FR", "French Guiana":"GF", "French Polynesia":"PF", "French Southern Territories":"TF", "Gabon":"GA", "Gambia":"GM", "Georgia":"GE", "Germany":"DE", "Ghana":"GH", "Gibraltar":"GI", "Greece":"GR", "Greenland":"GL", "Grenada":"GD", "Guadeloupe":"GP", "Guam":"GU", "Guatemala":"GT", "Guernsey":"GG", "Guinea":"GN", "Guinea-Bissau":"GW", "Guyana":"GY", "Haiti":"HT", "Heard Island and McDonald Islands":"HM", "Honduras":"HN", "Hong Kong":"HK", "Hungary":"HU", "Iceland":"IS", "India":"IN", "Indonesia":"ID", "Iran":"IR", "Iraq":"IQ", "Ireland":"IE", "Isle of Man":"IM", "Israel":"IL", "Italy":"IT", "Cote d'Ivoire":"CI", "Jamaica":"JM", "Japan":"JP", "Jersey":"JE", "Jordan":"JO", "Kazakhstan":"KZ", "Kenya":"KE", "Kiribati":"KI", "Kosovo":"XK", "Kuwait":"KW", "Kyrgyzstan":"KG", "Laos":"LA", "Latvia":"LV", "Lebanon":"LB", "Lesotho":"LS", "Liberia":"LR", "Libya":"LY", "Liechtenstein":"LI", "Lithuania":"LT", "Luxembourg":"LU", "Macao":"MO", "North Macedonia":"MK", "Madagascar":"MG", "Malawi":"MW", "Malaysia":"MY", "Maldives":"MV", "Mali":"ML", "Malta":"MT", "Marshall Islands":"MH", "Martinique":"MQ", "Mauritania":"MR", "Mauritius":"MU", "Mayotte":"YT", "Mexico":"MX", "Micronesia":"FM", "Moldova":"MD", "Monaco":"MC", "Mongolia":"MN", "Montenegro":"ME", "Montserrat":"MS", "Morocco":"MA", "Mozambique":"MZ", "Myanmar":"MM", "Namibia":"NA", "Nauru":"NR", "Nepal":"NP", "Netherlands":"NL", "Netherlands Antilles":"AN", "New Caledonia":"NC", "New Zealand":"NZ", "Nicaragua":"NI", "Niger":"NE", "Nigeria":"NG", "Niue":"NU", "Norfolk Island":"NF", "North Korea":"KP", "Northern Mariana Islands":"MP", "Norway":"NO", "Oman":"OM", "Pakistan":"PK", "Palau":"PW", "Palestinian Territory":"PS", "Panama":"PA", "Papua New Guinea":"PG", "Paraguay":"PY", "Peru":"PE", "Philippines":"PH", "Pitcairn":"PN", "Poland":"PL", "Portugal":"PT", "Puerto Rico":"PR", "Qatar":"QA", "Congo (Brazzaville)":"CG", "Reunion":"RE", "Romania":"RO", "Russia":"RU", "Rwanda":"RW", "Saint Barthelemy":"BL", "Saint Helena":"SH", "Saint Kitts and Nevis":"KN", "Saint Lucia":"LC", "Saint Martin":"MF", "Saint Pierre and Miquelon":"PM", "Saint Vincent and the Grenadines":"VC", "Samoa":"WS", "San Marino":"SM", "Sao Tome and Principe":"ST", "Saudi Arabia":"SA", "Senegal":"SN", "Serbia":"RS", "Serbia and Montenegro":"CS", "Seychelles":"SC", "Sierra Leone":"SL", "Singapore":"SG", "Sint Maarten":"SX", "Slovakia":"SK", "Slovenia":"SI", "Solomon Islands":"SB", "Somalia":"SO", "South Africa":"ZA", "South Georgia and the South Sandwich Islands":"GS", "Korea, South":"KR", "South Sudan":"SS", "Spain":"ES", "Sri Lanka":"LK", "Sudan":"SD", "Suriname":"SR", "Svalbard and Jan Mayen":"SJ", "Swaziland":"SZ", "Sweden":"SE", "Switzerland":"CH", "Syria":"SY", "Taiwan*":"TW", "Tajikistan":"TJ", "Tanzania":"TZ", "Thailand":"TH", "Togo":"TG", "Tokelau":"TK", "Tonga":"TO", "Trinidad and Tobago":"TT", "Tunisia":"TN", "Turkey":"TR", "Turkmenistan":"TM", "Turks and Caicos Islands":"TC", "Tuvalu":"TV", "U.S. Virgin Islands":"VI", "Uganda":"UG", "Ukraine":"UA", "United Arab Emirates":"AE", "United Kingdom":"GB", "US":"US", "United States Minor Outlying Islands":"UM", "Uruguay":"UY", "Uzbekistan":"UZ", "Vanuatu":"VU", "Holy See":"VA", "Venezuela":"VE", "Vietnam":"VN", "Wallis and Futuna":"WF", "Western Sahara":"EH", "Yemen":"YE", "Zambia":"ZM", "Zimbabwe":"ZW"}
 def getData(request):
-    
-    # try:
-    #     response = requests.get('https://coronavirus-tracker-api.herokuapp.com/all')
-    #     response.raise_for_status()
-    # except requests.exceptions.HTTPError as e:
-    #     print (e.response.text,'Failed: https://coronavirus-tracker-api.herokuapp.com/all')
-
     try:
-        response2 = requests.get('https://opendata.arcgis.com/datasets/bbb2e4f589ba40d692fab712ae37b9ac_1.geojson')
-        response2.raise_for_status()
+        res = requests.get('https://api.covid19api.com/summary')
     except requests.exceptions.HTTPError as e:
-        print (e.response.text,'Failed: https://opendata.arcgis.com/datasets/bbb2e4f589ba40d692fab712ae37b9ac_1.geojson')
+        print (e.response.text,'Failed: https://api.covid19api.com/summary')
 
-    # if (response.json()):
-    #     geodata = response.json()
-    #     res_dict={}
-    
-    #     for i in geodata['confirmed']['locations']:
-    #         #print(i['country_code'],i['latest'])
-    #         if i['country_code'] in res_dict:
-    #             res_dict[i['country_code']]+=i['latest']
-    #         else:
-    #             res_dict[i['country_code']]=i['latest']
+    if res:
+        resp_data = res.json()
+        # print (resp_data)
+        # print (resp_data['Message'])
+        # print (resp_data['Global'])
+        # print (resp_data['Countries'])
+        print (resp_data['Date'])
         
-    #     #print(res_dict)
-        
-    #     res_recov_dict={}
-    #     for i in geodata['recovered']['locations']:
-    #         #print(i['country_code'],i['latest'])
-    #         if i['country_code'] in res_recov_dict:
-    #             res_recov_dict[i['country_code']]+=i['latest']
-    #         else:
-    #             res_recov_dict[i['country_code']]=i['latest']
-        
-    #     #print(res_recov_dict)
+        newconfirmed = 0
+        totalconfirmed = 0
+        newdeaths = 0
+        totaldeaths = 0
+        newrecovered = 0
+        totalrecovered = 0
+        date = 0
 
-    #     res_deaths_dict={}
-    #     for i in geodata['deaths']['locations']:
-    #         #print(i['country_code'],i['latest'])
-    #         if i['country_code'] in res_deaths_dict:
-    #             res_deaths_dict[i['country_code']]+=i['latest']
-    #         else:
-    #             res_deaths_dict[i['country_code']]=i['latest']
-        
-    #     #print(res_deaths_dict)
+        if resp_data['Global']['NewConfirmed']:
+            newconfirmed = resp_data['Global']['NewConfirmed']
 
-    #     res_arr=[]
-    #     for k,v in res_dict.items():
-    #         #print(k,v)
-    #         if k in country_code:
-    #             #res_arr.append({"code3":country_code[k],"z":v,"code":k,"value":v,"recovered":res_recov_dict[k],"deaths":res_deaths_dict[k] })
-    #             res_arr.append({"code3":country_code[k],"z":v,"code":k,"value":v,"recovered":res_recov_dict.get(k, 0),"deaths":res_deaths_dict.get(k, 0) })
+        if resp_data['Global']['TotalConfirmed']:
+            totalconfirmed = resp_data['Global']['TotalConfirmed']
 
-    #     res_arr_obj=json.dumps(res_arr)
-    
-    res_deaths_dict2={}
-    confirmed_cases={}
-    recovered_cases={}
-    deaths_cases={}
-    active_cases={} #
+        if resp_data['Global']['NewDeaths']:
+            newdeaths = resp_data['Global']['NewDeaths']
+
+        if resp_data['Global']['TotalDeaths']:
+            totaldeaths = resp_data['Global']['TotalDeaths']
+
+        if resp_data['Global']['NewRecovered']:
+            newrecovered = resp_data['Global']['NewRecovered']
+
+        if resp_data['Global']['TotalRecovered']:
+            totalrecovered = resp_data['Global']['TotalRecovered']
+
+        if resp_data['Global']['Date']:
+            date = resp_data['Global']['Date']
+
+        out_dict = {
+            "NewConfirmed":newconfirmed,
+            "TotalConfirmed":totalconfirmed,
+            "NewDeaths":newdeaths,
+            "TotalDeaths":totaldeaths,
+            "NewRecovered":newrecovered,
+            "TotalRecovered":totalrecovered,
+            "Date":date
+        }
+        total_recovered = totalconfirmed- newconfirmed
+        print (out_dict)
+
     res_arr2=[]
     res_arr_obj2={}
     res_obj3={}
 
-    total_reported=0
-    total_recovered=0
-    total_deaths=0
     dt_data={}
     dt_data['data']=[]
-
-    if (response2):
-        geodata2 = response2.json()
-
-        for info in geodata2['features']:
-            outstr= '{},{},{},{}\n'.format(info['properties']['Country_Region'],info['properties']['Confirmed'],info['properties']['Recovered'],info['properties']['Deaths'])
-            #print(outstr)
-            total_reported=total_reported+info['properties']['Confirmed']
-            total_recovered=total_recovered+info['properties']['Recovered']
-            total_deaths=total_deaths+info['properties']['Deaths']
-            total_active=total_deaths+info['properties']['Active'] #
-            if info['properties']['Province_State']=='Greenland':
-                info['properties']['Country_Region']='Greenland'
-            if info['properties']['Province_State']=='Hong Kong':
-                info['properties']['Country_Region']='Hong Kong'
-            if info['properties']['Country_Region']=='Burma':
-                info['properties']['Country_Region']='Myanmar'
-
-            if info['properties']['Country_Region'] in country_code2:
-                #print(country_code2[info['properties']['Country_Region']])
-                if country_code2[info['properties']['Country_Region']] in confirmed_cases:
-                    confirmed_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Confirmed']
-                else:
-                    confirmed_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Confirmed']
-                
-                if country_code2[info['properties']['Country_Region']] in recovered_cases:
-                    recovered_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Recovered']
-                else:
-                    recovered_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Recovered']
-
-                if country_code2[info['properties']['Country_Region']] in deaths_cases:
-                    deaths_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Deaths']
-                else:
-                    deaths_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Deaths']
-                
-                if country_code2[info['properties']['Country_Region']] in active_cases: #
-                    active_cases[country_code2[info['properties']['Country_Region']]]+=info['properties']['Active']
-                else:
-                    active_cases[country_code2[info['properties']['Country_Region']]]=info['properties']['Active']
-        #print (confirmed_cases)
-        #print (active_cases)
-        #print (recovered_cases)
-
-        for c3code,c2code in country_code2.items():
-            outstr=None
-            
-            countryNameDt=None
-            if c3code == 'Congo (Kinshasa)':
-                countryNameDt = 'Democratic Republic of Congo (Kinshasa)'
-            elif c3code == 'Congo (Brazzaville)':
-                countryNameDt = 'Republic of Congo (Brazzaville)'
-            elif c3code == 'Timor-Leste':
-                countryNameDt= 'East Timor (Timor-Leste)'
-            elif c3code == 'Burma':
-                countryNameDt= 'Myanmar'
-            else:
-                countryNameDt= c3code
-            
-            if c2code in confirmed_cases:
-                #res_arr2.append({"code3":country_code[c2code],"z":confirmed_cases[c2code],"code":c2code,"value":confirmed_cases[c2code],"recovered":recovered_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0) })
-                res_arr2.append({"code3":country_code[c2code],"z":active_cases.get(c2code, 0),"code":c2code,"value":active_cases.get(c2code, 0),"active":active_cases.get(c2code, 0),"deaths":deaths_cases.get(c2code, 0),"recovered":recovered_cases.get(c2code, 0)})
-                outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0))
-                #dt_data['data'].append([c3code,country_code[c2code],confirmed_cases[c2code],recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0)])
-                if recovered_cases[c2code] == 0:
-                    recovered_cases[c2code] = "NA"
-
-                dt_data['data'].append([countryNameDt,country_code[c2code],active_cases.get(c2code,0),recovered_cases.get(c2code, 0),deaths_cases.get(c2code, 0),confirmed_cases[c2code]])
-            else:
-                #res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0 })
-                res_arr2.append({"code3":country_code[c2code],"z":0,"code":c2code,"value":0,"recovered":0,"deaths":0,"active":0 })
-                outstr = '{}\t{}\t{}\t{}\t{}\n'.format(c3code,country_code[c2code],0,0,0)
-                #dt_data['data'].append([c3code,country_code[c2code],0,0,0])
-                dt_data['data'].append([countryNameDt,country_code[c2code],0,"NA","NA","NA"])            
         
-        dt_data_response=json.dumps(dt_data['data'])
-        
-        res_arr_obj2 = json.dumps(res_arr2)
-        res_obj3={
-            'total_reported':total_reported,
-            'total_recovered':total_recovered,
-            'total_deaths':total_deaths,
-            'total_active':total_active,
-            'plotdata':res_arr2,
-            'dt_table':dt_data_response
-            }
+    for stats in resp_data['Countries']:
+        # print (stats)
+        total_recov = stats['TotalConfirmed']- stats['NewConfirmed']
+        res_arr2.append({"code3":country_code[stats['CountryCode']],"z":stats['NewConfirmed'],"code":stats['CountryCode'],"value":stats['NewConfirmed'],"recovered":total_recov,"deaths":stats['TotalDeaths'],"active":stats['NewConfirmed'] })
+        dt_data['data'].append([stats['Country'],country_code[stats['CountryCode']],stats['NewConfirmed'],total_recov,stats['TotalDeaths'],stats['TotalConfirmed']]) 
+
+    dt_data_response=json.dumps(dt_data['data'])
+    res_arr_obj2 = json.dumps(res_arr2)
+    # print(res_arr_obj2)
+    res_obj3={
+        'total_reported':totalconfirmed,
+        'total_recovered':total_recovered,
+        'total_deaths':totaldeaths,
+        'total_active':newconfirmed,
+        'plotdata':res_arr2,
+        'dt_table':dt_data_response
+        }
     
     #print(dt_data_response)
     
-    if len(res_arr_obj2) < 1: # if arcgis fails
-        return JsonResponse(res_arr_obj,safe=False)
-    else:
-        return JsonResponse(res_obj3,safe=False)
+    return JsonResponse(res_obj3,safe=False)
 
 # source country wise data: https://www.arcgis.com/home/item.html?id=c0b356e20b30490c8b8b4c7bb9554e7c&view=list#data
 # source time series: https://coronavirus-resources.esri.com/datasets/1cb306b5331945548745a5ccd290188e_4
 # source time series api: https://opendata.arcgis.com/datasets/1cb306b5331945548745a5ccd290188e_4.geojson
+
+# new source for country-wise data
+# https://api.covid19api.com/
+# https://documenter.getpostman.com/view/10808728/SzS8rjbc
+# https://api.covid19api.com/summary
