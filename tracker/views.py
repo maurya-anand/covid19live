@@ -24,7 +24,7 @@ def getData(request):
         # print (resp_data['Message'])
         # print (resp_data['Global'])
         # print (resp_data['Countries'])
-        print (resp_data['Date'])
+        # print (resp_data['Date'])
         
         newconfirmed = 0
         totalconfirmed = 0
@@ -65,7 +65,7 @@ def getData(request):
             "Date":date
         }
         total_recovered = totalconfirmed- newconfirmed
-        print (out_dict)
+        # print (out_dict)
 
     res_arr2=[]
     res_arr_obj2={}
