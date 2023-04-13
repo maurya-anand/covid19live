@@ -175,7 +175,7 @@ Highcharts.getJSON("data/", function (data) {
 });
 
 function createTable(dataSet) {
-  console.log(dataSet);
+  // console.log(dataSet);
   var table = $("#cases_dt").DataTable({
     dom:
       "<'d-flex justify-content-center mt-2'<'pb-0'f>>" +
