@@ -1,5 +1,8 @@
 ## Demo here:
-https://covidlive.herokuapp.com/
+
+https://covidlive-8jvw.onrender.com/
+
+This app was migrated to ['render'](https://render.com/) from ['heroku'](https://covidlive.herokuapp.com/)
 
 # Python: Getting Started
 
@@ -37,6 +40,7 @@ $ git push heroku master
 $ heroku run python manage.py migrate
 $ heroku open
 ```
+
 or
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
