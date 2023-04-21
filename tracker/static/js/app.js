@@ -45,6 +45,7 @@ function getLiveData() {
       );
       $("#last_updated_confirmed").text(new Date().toLocaleString());
       $("#last_updated_recovered").text(new Date().toLocaleString());
+      $("#last_updated_active").text(new Date().toLocaleString());
       $("#last_updated_death").text(new Date().toLocaleString());
     },
   });
