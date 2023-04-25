@@ -161,7 +161,9 @@ $(".btn-primary").click(function () {
 });
 
 function createTable(dataSet) {
-  console.log(dataSet);
+  // getting the height of the row that contains the map and the table
+  $scrollHeight = $("#main_content").height() - 70;
+  console.log($scrollHeight);
   $("#cases_dt").DataTable({
     data: JSON.parse(dataSet),
     columns: [
@@ -176,7 +178,8 @@ function createTable(dataSet) {
       [2, "desc"],
       [0, "asc"],
     ],
-    scrollY: "72vh",
+    scrollY: $scrollHeight + "vh",
+    // scrollY: "72vh",
     scrollCollapse: true,
     paging: false,
     language: {
