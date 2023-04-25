@@ -176,7 +176,7 @@ function createTable(dataSet) {
       [2, "desc"],
       [0, "asc"],
     ],
-    pageLength: 18,
+    pageLength: 15,
     language: {
       search: "",
       searchPlaceholder: "Search country",
