@@ -64,7 +64,6 @@ Highcharts.getJSON("data/", function (data) {
   } else {
     data_series = JSON.parse(data);
   }
-
   // Prevent logarithmic errors in color calulcation
   data_series.forEach(function (p) {
     p.value = p.value < 1 ? 1 : p.value;
@@ -72,38 +71,26 @@ Highcharts.getJSON("data/", function (data) {
   //console.log(data_series);
   Highcharts.mapChart("hc_container", {
     chart: {
-      //height: '40%',
+      height: (3 / 4) * 100 + "%",
+      // height: "74%",
       //borderWidth: 0.5,
       marginBottom: 0,
       spacingBottom: 0,
       map: "custom/world",
       zoomType: "xy",
     },
-
     mapNavigation: {
       enabled: false,
-      //enableDoubleClickZoomTo: false,
-      //enableMouseWheelZoom: true,
-      // buttonOptions: {
-      //     verticalAlign: 'bottom'
-      // }
     },
-
     title: {
-      //useHTML: true,
       text: "Current status of Coronavirus disease (COVID-19) pandemic",
     },
-
     subtitle: {
       text: "Hover or click on the country to view details. Select any area on the map to zoom.",
     },
-
     legend: {
       enabled: false,
     },
-
-    // colors: ["#ca0020", "#f4a582", "#f7f7f7", "#92c5de", "#0571b0"],
-
     colorAxis: {
       min: 1,
       max: 10000,
@@ -116,19 +103,15 @@ Highcharts.getJSON("data/", function (data) {
         [0.9, "#c4463a"],
       ],
     },
-
     credits: {
       enabled: false,
     },
-
     plotOptions: {
       map: {
         allAreas: false,
         joinBy: ["iso-a2", "code"],
         dataLabels: {
           enabled: true,
-          //color: '#FFFFFF',
-          // Only show dataLabels for areas with high label rank
           format: null,
           formatter: function () {
             if (
@@ -145,16 +128,12 @@ Highcharts.getJSON("data/", function (data) {
         },
       },
     },
-
     series: [
       {
         name: "Countries",
-        //color: '#E0E0E0',
-        //nullColor: 'red',
         enableMouseTracking: false,
       },
       {
-        //type: 'mapbubble',
         name: "Total cases in",
         joinBy: ["iso-a3", "code3"],
         data: data_series,
@@ -162,8 +141,6 @@ Highcharts.getJSON("data/", function (data) {
         maxSize: "15%",
         tooltip: {
           useHTML: true,
-          //pointFormat: '<span style="font-size:12px">{point.name} ({point.properties.hc-a2}):</span><br><span style="font-size:20px">{point.z}</span>'
-          //pointFormat: '<span style="font-size:12px">{point.name} ({point.properties.hc-a2}):</span><br>Confirmed:<span style="font-size:20px"> {point.z}</span><br>Recovered:<span style="font-size:20px"> {point.recovered}</span><br>Deaths:<span style="font-size:20px"> {point.deaths}</span>'
           pointFormat:
             '<span style="font-size:20px">{point.name}<br></span><br></br>' +
             '<span style="font-size:12px;">Active: </span><span style="font-size:15px"> {point.z}</span><br><br>' +
@@ -175,43 +152,37 @@ Highcharts.getJSON("data/", function (data) {
   });
 });
 
+$(".btn-primary").click(function () {
+  $(".collapse").collapse("toggle");
+  $("#nxtFrame").attr(
+    "src",
+    "https://nextstrain.org/ncov/global?sidebar=closed"
+  );
+});
+
 function createTable(dataSet) {
-  // console.log(dataSet);
-  var table = $("#cases_dt").DataTable({
-    dom:
-      "<'d-flex justify-content-center mt-2'<'pb-0'f>>" +
-      "<'row'<'col-sm-12'tr>>" +
-      "<'row align-items-center'<'col justify-content-center'p>>",
-    language: {
-      searchPlaceholder: "Country ...",
-      search: "Filter by:",
-      zeroRecords: "No data available",
-    },
+  console.log(dataSet);
+  $("#cases_dt").DataTable({
     data: JSON.parse(dataSet),
     columns: [
-      { title: "Country", width: "30%" },
+      { title: "Country" },
       { title: "Code", visible: false },
       { title: "Active", searchable: false },
       { title: "Recovered", searchable: false },
       { title: "Deaths", searchable: false },
-
       { title: "Total cases", searchable: false },
     ],
     order: [
       [2, "desc"],
       [0, "asc"],
     ],
-    paging: false,
-    //scrollY: 300,
-    scrollY: "70vh",
-    scrollX: true,
-    pageLength: 50,
+    pageLength: 18,
+    language: {
+      search: "",
+      searchPlaceholder: "Search country",
+      zeroRecords: "No data available",
+    },
+    pageResize: true,
+    dom: '<"top"f>rt<"bottom"><"clear">',
   });
 }
-
-$("#loadNextstrain").click(function () {
-  $("#nxtFrame").attr(
-    "src",
-    "https://nextstrain.org/ncov/global?sidebar=closed"
-  );
-});
