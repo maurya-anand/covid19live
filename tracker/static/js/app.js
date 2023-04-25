@@ -176,7 +176,7 @@ function createTable(dataSet) {
       [2, "desc"],
       [0, "asc"],
     ],
-    scrollY: "70vh",
+    scrollY: "72vh",
     scrollCollapse: true,
     paging: false,
     language: {
