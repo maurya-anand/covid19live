@@ -71,7 +71,6 @@ Highcharts.getJSON("data/", function (data) {
   //console.log(data_series);
   Highcharts.mapChart("hc_container", {
     chart: {
-      // height: (3 / 4) * 100 + "%",
       height: 55 + "%",
       marginBottom: 0,
       spacingBottom: 0,
