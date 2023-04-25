@@ -72,7 +72,7 @@ Highcharts.getJSON("data/", function (data) {
   Highcharts.mapChart("hc_container", {
     chart: {
       // height: (3 / 4) * 100 + "%",
-      height: 100 + "%",
+      height: 55 + "%",
       marginBottom: 0,
       spacingBottom: 0,
       map: "custom/world",
@@ -174,8 +174,7 @@ function createTable(dataSet) {
       [2, "desc"],
       [0, "asc"],
     ],
-    // scrollY: 75 + "vh",
-    scrollY: 100 + "vh",
+    scrollY: 62 + "vh",
     scrollCollapse: true,
     paging: false,
     language: {
