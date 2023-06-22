@@ -56,7 +56,7 @@ def getData(request):
         url=per_country_stats_source_api)
     if (per_country_stats_stats_res):
         for country in per_country_stats_stats_res:
-            if 'active' in country and 'countryInfo' in country and 'iso3' in country['countryInfo'] and country['countryInfo']['iso3'] and country['active']:
+            if 'active' in country and 'countryInfo' in country and 'iso3' in country['countryInfo']:
                 res_arr2.append({
                     "code3": country['countryInfo']['iso3'],
                     "z": country['active'],
@@ -81,6 +81,4 @@ def getData(request):
         'plotdata': json.dumps(res_arr2),
         'dt_table': dt_data['data'],
     }
-    print(json.dumps(res_arr2))
-    print(json.dumps(dt_data['data']))
     return JsonResponse(res_obj3, safe=False)

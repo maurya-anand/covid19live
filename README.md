@@ -10,3 +10,6 @@ This app was migrated to ['render'](https://render.com/) from ['heroku'](https:/
 ## Migration instructions
 
 [https://render.com/blog/migrate-django-from-heroku](https://render.com/blog/migrate-django-from-heroku)
+
+> **Warn**
+> Disclaimer: The information displayed on the web application may not be accurate. Please note that this project was created solely for the purpose of learning the framework and should not be relied upon for factual or authoritative information.
