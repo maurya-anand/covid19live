@@ -52,10 +52,11 @@ function getLiveData() {
 }
 
 Highcharts.getJSON("data/", function (data) {
-  //data_series= JSON.parse(data);
-  var data_series = data["plotdata"];
+  data_series = JSON.parse(data["plotdata"]);
+  // var data_series = data["plotdata"];
+  console.log(data_series);
   if (data_series) {
-    data_series = data.plotdata;
+    // data_series = data.plotdata;
     $("#total_confirmed_cases").text(data.total_reported);
     $("#total_recovered_cases").text(data.total_recovered);
     $("#total_death_cases").text(data.total_deaths);
@@ -68,7 +69,7 @@ Highcharts.getJSON("data/", function (data) {
   data_series.forEach(function (p) {
     p.value = p.value < 1 ? 1 : p.value;
   });
-  //console.log(data_series);
+
   Highcharts.mapChart("hc_container", {
     chart: {
       height: 55 + "%",
@@ -90,16 +91,9 @@ Highcharts.getJSON("data/", function (data) {
       enabled: false,
     },
     colorAxis: {
-      min: 1,
-      max: 10000,
       type: "logarithmic",
-      // minColor: '#d4edda',  #ffffff',  #ece2f0
-      // maxColor: '#007bff',
-      stops: [
-        [0, "#2b83ba"],
-        [0.5, "#92c5de"],
-        [0.9, "#c4463a"],
-      ],
+      minColor: "#7928CA",
+      maxColor: "#FF0080",
     },
     credits: {
       enabled: false,
@@ -160,7 +154,7 @@ $(".btn-primary").click(function () {
 
 function createTable(dataSet) {
   $("#cases_dt").DataTable({
-    data: JSON.parse(dataSet),
+    data: dataSet,
     columns: [
       { title: "Country" },
       { title: "Code", visible: false },
