@@ -44,7 +44,7 @@ Highcharts.getJSON("data/", function (data) {
   } else {
     data_series = JSON.parse(data);
   }
-  // Prevent logarithmic errors in color calulcation
+  // Prevent logarithmic errors in color calculation
   data_series.forEach(function (p) {
     p.value = p.value < 1 ? 1 : p.value;
   });
