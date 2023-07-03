@@ -1,1 +1,4 @@
-static/* linguist-vendored
+tracker/static/css/* linguist-vendored
+tracker/static/img/* linguist-vendored
+tracker/static/fonts/* linguist-vendored
+tracker/static/js/core/* linguist-vendored
